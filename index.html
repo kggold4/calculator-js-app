@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- meta settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- title -->
+    <title> KG Calculator </title>
+
+    <!-- javascript -->
+    <script src="mainJS.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="mainCSS.css">
+
+</head>
+
+<body>
+
+    <div id="outputview"></div>
+    
+    <section class="calculator">
+        <div class="firstraw">
+            <a onclick="equal();">=</a>
+            <a onclick="clean();">C</a>
+            <a onclick="back();">«</a>
+        </div>
+
+        <div class="raw">
+            <a onclick="insert('7')">7</a>
+            <a onclick="insert('8')">8</a>
+            <a onclick="insert('9')">9</a>
+            <a onclick="insert('+')">+</a>
+        </div>
+
+        <div class="raw">
+            <a onclick="insert('4')">4</a>
+            <a onclick="insert('5')">5</a>
+            <a onclick="insert('6')">6</a>
+            <a onclick="insert('-')">-</a>
+        </div>
+
+        <div class="raw">
+            <a onclick="insert('1')">1</a>
+            <a onclick="insert('2')">2</a>
+            <a onclick="insert('3')">3</a>
+            <a onclick="insert('.')">.</a>
+        </div>
+
+        <div class="raw">
+            <a onclick="insert('0')">0</a>
+            <a onclick="insert('*')">*</a>
+            <a onclick="insert('/')">/</a>
+            <a onclick="insert('%')">%</a>
+        </div>
+    </section>
+    
+</body>
+</html>
