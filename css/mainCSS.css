@@ -1,5 +1,38 @@
-html {
-    font-family: Segoe UI;
+:root {
+    --mainfont: Segoe UI;
+    --gray: #333;
+    --lightGray: #e0e2e4;
+    --lighterGray: #f0f0f0;
+    --blue: #345;
+    --lightBlue: #4d6985;
+}
+
+* {
+    font-family: var(--mainfont);
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -ms-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section {
+    width: 0.5fr;
+    margin: auto;
+    text-align: center;
+    color: var(--gray);
+    padding: 5% 0;
+    margin: auto;
+}
+
+.history {
+    text-align: left;
+    font-style: italic;
 }
 
 #outputview {
@@ -8,41 +41,53 @@ html {
     background: none;
     padding: 25px 0;
     text-align: center;
-    color: #333;
-    border: 2px solid #345;
+    color: var(--gray);
+    border: 2px solid var(--blue);
     font-weight: bold;
     margin: auto;
-    margin-top: 100px;
-}
-
-.calculator {
-    width: 450px;
-    margin: auto;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 a {
-    background: #345;
-    border: 1px solid #345;
+    background: var(--blue);
+    border: 1px solid var(--blue);
     margin: 8px 8px; 
     padding: 25px 0;
     text-align: center;
     color: white;
-    -webkit-transition: all 100ms ease-in-out;
-    -moz-transition: all 100ms ease-in-out;
-    -ms-transition: all 100ms ease-in-out;
-    -o-transition: all 100ms ease-in-out;
-    transition: all 100ms ease-in-out;
+    
+}
+
+#clearHistory {
+    background: var(--lighterGray);
+    border: 1px solid var(--gray);
+    border-radius: 1px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    font-weight: bold;
+    color: var(--gray);
+}
+
+#clearHistory:hover {
+    cursor: pointer;
+    background: var(--lightGray);
+    border-radius: 1px;
+}
+
+#clearHistory:active {
+    color: white;
+    background: var(--blue);
+    border-radius: 1px;
 }
 
 a:hover {
-    background: #333;
+    background: var(--gray);
     border: 1px solid white;
     font-weight: bold;
 }
 
 a:active {
-    border: 1px solid white;
+    background: var(--lightBlue);
 }
 
 .firstraw {
@@ -53,4 +98,12 @@ a:active {
 .raw {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#error {
+    color: red;
+    text-align: left;
+    font-style: italic;
+    font-weight: 600;
+    padding: 10px;
 }
